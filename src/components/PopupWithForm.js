@@ -1,24 +1,24 @@
+import Popup from "./Popup";
+
 export default function PopupWithForm({
   name,
   title,
   children,
   buttonText,
-  onClose,
-  isOpen,
   onSubmit,
   isLoading,
+  onClose,
+  ...restProps
 }) {
-  const handlerOverlayClick = (e) => {
-    if (e.target === e.currentTarget) onClose();
-  };
-
   return (
-    <div
-      className={`popup popup_type_${name} 
-      ${isOpen && "popup_opened"}`}
-      onClick={handlerOverlayClick}
-    >
+    <Popup {...restProps}>
       <div className="popup__container">
+        <button
+          className="popup__cross"
+          type="button"
+          aria-label="Закрыть форму."
+          onClick={onClose}
+        ></button>
         <h3 className="popup__title">{title}</h3>
         <form
           className="form"
@@ -36,15 +36,7 @@ export default function PopupWithForm({
             {buttonText}
           </button>
         </form>
-        <button
-          className="popup__cross"
-          type="button"
-          aria-label="Закрыть форму."
-          onClick={onClose}
-        ></button>
       </div>
-    </div>
+    </Popup>
   );
 }
-
-<div className="popup popup_type_delete-card"></div>;
