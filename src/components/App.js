@@ -55,6 +55,10 @@ function App() {
   };
 
   useEffect(() => {
+    checkToken();
+  }, [history]);
+
+  useEffect(() => {
     if (loggedIn) {
       Promise.all([api.getUserInfo(), api.getInitialCards()])
         .then(([userData, cards]) => {
@@ -205,6 +209,7 @@ function App() {
     setIsAddPlacePopupOpen(false);
     setSelectedCard({});
     setDeletingCard({});
+    setIsInfoTooltipOpen({ ...isInfoTooltipOpen, isOpened: false });
   }
 
   return (

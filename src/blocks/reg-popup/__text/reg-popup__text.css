@@ -1,5 +1,5 @@
-.reg-info__text {
-  font-family: 'Inter', 'Verdana', sans-serif;
+.reg-popup__text {
+  font-family: "Inter", "Verdana", sans-serif;
   font-weight: 900;
   font-size: 20px;
   line-height: 1.2;
@@ -9,7 +9,7 @@
 }
 
 @media (min-width: 768px) {
-  .reg-info__text {
+  .reg-popup__text {
     font-size: 24px;
   }
 }

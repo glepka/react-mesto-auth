@@ -1,4 +1,4 @@
-.reg-info {
+.reg-popup {
   display: grid;
   place-items: center;
   row-gap: 40px;
@@ -6,7 +6,7 @@
 }
 
 @media (min-width: 768px) {
-  .reg-info {
+  .reg-popup {
     padding: 24px 0;
   }
 }

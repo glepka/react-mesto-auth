@@ -8,10 +8,10 @@ export default function PopupWithForm({
   onSubmit,
   isLoading,
   onClose,
-  ...restProps
+  isOpen,
 }) {
   return (
-    <Popup {...restProps}>
+    <Popup onClose={onClose} isOpen={isOpen}>
       <div className="popup__container">
         <button
           className="popup__cross"
