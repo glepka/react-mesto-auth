@@ -19,4 +19,4 @@ npm run build
 Собранный проект попадает в папку /build.
 
 ---
-Ссылка на проект: https://glepka.github.io/mesto-react/ 
+Ссылка на проект: https://glepka.github.io/react-mesto-auth/
